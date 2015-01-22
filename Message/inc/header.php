@@ -3,6 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+        <script src="js/jquery.js" type="text/javascript" ></script>
         <title><?= $title;?></title>
     </head>
     <body>
