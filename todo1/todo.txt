@@ -6,7 +6,7 @@ listTasks() - Read Tasks array
 CRUD (functions.php)
 - Create -done
 - Read -done
-- Update 
+- Update -done
 - delete -done
 
 CREATE : 
@@ -17,9 +17,5 @@ CREATE :
    - Create  - 1.Read File, 2. convert JSon to array 3.Add row to array 4.convert to json  5. write to file  
    - Update  - 1.Read file  2.init new task to add  3.Update  4.Json to aray  5.Write File 
    - Delete  - done
-
--UNSET() - delete a variable
-
--HEADER() ; - polzvame za  redirect i encoding 
 
 
