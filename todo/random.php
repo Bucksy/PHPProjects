@@ -33,7 +33,7 @@ function sort2(&$tasks, $order){
             return strcmp($a['created'], $b['created']); // strcmp(a,b)  : 0, -1, 1
         });
     }else{
-        uasort($tasks, function($a,$b){
+        uasort($tasks, function($a, $b){
             return strcmp($b['created'], $a['created']);
         });
 }
@@ -145,3 +145,10 @@ function json1(){
 }
 
 json1();
+
+//Masiv -> fail - > json - > mysql
+// polzvame json tui kato formata mu e po lesno za obrabotvane, otkolkoto da zapishem info v fail 
+// trudno text - se obratbotva 
+//shte napravim nqkolko funkcii koito mojem da obratbotvam tasks 
+// dobri praktiki - ne e hubavo da se dublirat kod , zatova slagame dublikati v edin fail i polzvame na vsqkude 
+

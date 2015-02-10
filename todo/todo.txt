@@ -1,1 +1,26 @@
 Simple To-do List 
+
+2.2.2015
+CRUD 
+- Create -done
+- Read -done
+- Update 
+- delete -done
+
+CREATE : 
+1. Suzdavane forma 
+2. Link za iztrivane + Link  za updatvane v tablicata 
+3. Fail za HTML  forma - da mojem da prevuzpolzva CREATE + UPDATE  na dannite ot tablicata - form.php
+4. Funkcii za Create, Update, Delete
+   - Create  - 1.Read File, 2. convert JSon to array 3.Add row to array 4.convert to json  5. write to file  
+   - Update  - 1.Read file  2.init new task to add  3.Update  4.Json to aray  5.Write File 
+   - Delete  - done
+
+-UNSET() - delete a variable
+
+-HEADER() ; - polzvame za  redirect i encoding 
+
+5.02.2015
+-Update function() - 
+-
+

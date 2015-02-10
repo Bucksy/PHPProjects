@@ -34,7 +34,7 @@ $menu = array(
     ),
     1=>array(
      'name' => 'Tasks',
-     'link' => 'tasks.php',
+     'link' => 'index.php?page=tasks&action=list',
     ),
     2=>array(
      'name'=>'Finished Tasks',
