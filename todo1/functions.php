@@ -1,6 +1,10 @@
 <?php
 
 //VIEW - tasks = array(); or 
+
+/**
+ * Initializes the file with some data
+ */
 function init(){
 $tasks = array(
     0=>array(
@@ -34,6 +38,11 @@ writeTasks($tasks);
 
 //init();
 
+/**
+ * Gets all tasks from the database.
+ * 
+ * @return An array of tasks
+ */
 function listTasks(){ //Tasks Array
     
    $json =  file_get_contents('./data/tasks.json');
@@ -42,7 +51,9 @@ function listTasks(){ //Tasks Array
    
 }
 
-
+/**
+ * Creates a new task
+ */
 function createTasks() {
     $tasks = listTasks(); //read file 1 and 2
     //step 3 
@@ -64,6 +75,9 @@ function createTasks() {
     }
 }
 
+/**
+ * Updates a single task by it's id
+ */
 function updateTasks() {
 
     $tasks = listTasks();
@@ -81,6 +95,10 @@ function updateTasks() {
         redirectToDefaultPage();
     }
 }
+
+/**
+ * Delete a task by it's id
+ */
 
 function deleteTasks(){
     
@@ -102,11 +120,19 @@ function deleteTasks(){
     redirectToDefaultPage();
 }
 
+/**
+ * Encodes the given task and saves it to the file
+ */
 function writeTasks($tasks){
    $json = json_encode($tasks);//CONVERT INTO JSON and put it in the file
    file_put_contents('./data/tasks.json', $json);
 }
 
+/**
+ * Gets all task data from a post request
+ * 
+ * @return A single task with data filled from the post request
+ */
 function fetchPostData() {
     return array(
             'id' => $_POST['id'], //TODO Generate sequent ID
@@ -118,6 +144,9 @@ function fetchPostData() {
         );
 }
 
+/**
+ * Redirects the user to the index's list page.
+ */
 function redirectToDefaultPage(){
      header('Location: index.php?page=tasks&action=list');
      exit;
@@ -147,7 +176,10 @@ function sortAll(&$tasks, $order) {
     }
 }
 
-
+/**
+ * Processes all incoming requests
+ */
+ 
 function proccessRequest(){
     if (isset($_GET['page'])) { //http://localhost/todo/functions.php?page=tasks
         $defaultAction = 'list';// 
